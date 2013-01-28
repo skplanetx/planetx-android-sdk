@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Fri Dec 07 17:35:35 KST 2012
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=PlanetX_OAuth_And_fat.jar
+manifest.mergeall=true
+manifest.mainclass=
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=<jar|android.jar>;<jar|annotations.jar>
+includes=

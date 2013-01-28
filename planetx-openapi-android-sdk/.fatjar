@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Fri Dec 07 17:34:42 KST 2012
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=SKPOP_SDK_And_fat.jar
+manifest.mergeall=false
+manifest.mainclass=
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=<po|SKPOP_SDK_OAuth_And>;<jar|android.jar>;<jar|annotations.jar>;<jar|android.jar>;<jar|annotations.jar>
+includes=
