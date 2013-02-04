@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/MAIN_BTN_LOGIN"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="@string/btn_login" />
+
+            <Button
+                android:id="@+id/MAIN_BTN_MELON_NEWSONGS"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="@string/btn_melon_newsongs" />
+
+            <Button
+                android:id="@+id/MAIN_BTN_NATEON_GETPROFILE"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="@string/btn_nateon_getprofile" />
+
+            <Button
+                android:id="@+id/MAIN_BTN_NATEON_MODPROFILE"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="@string/btn_nateon_modprofile" />
+
+            <Button
+                android:id="@+id/MAIN_BTN_CLOG_WRITE_ARTICLE"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="@string/btn_clog_writearticle" />
+
+            <Button
+                android:id="@+id/MAIN_BTN_CLOG_IMG_UPLOAD"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="@string/btn_clog_uploadimage" />
+
+            <Button
+                android:id="@+id/MAIN_BTN_CLOG_DELETE_ARTICLE"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="20dp"
+                android:text="@string/btn_clog_deletearticle" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

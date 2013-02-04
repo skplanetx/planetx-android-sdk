@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, SKPlanetTestProjectActivity!</string>
+    <string name="app_name">SKPlanetTestProject</string>
+    
+    <string name="btn_sync">Sync</string>
+    <string name="btn_async">ASync</string>
+    
+    <string name="btn_login">0. OneID Login</string>
+    <string name="btn_melon_newsongs"	 >1.[ GET  ] Melon/New Songs</string>
+    <string name="btn_nateon_getprofile" >2.[ GET  ] NateOn/Profile</string>
+    <string name="btn_nateon_modprofile" >3.[ PUT  ] NateOn/Modify Profile</string>
+    <string name="btn_clog_writearticle" >4.[ POST ] Cyworld/Note/Write Article </string>
+    <string name="btn_clog_uploadimage"  >5.[ POST ] Cyworld/Note/Upload Image</string>
+    <string name="btn_clog_deletearticle">6.[DELETE] Cyworld/Note/Delete Article</string>
+    
+    
+    <string name="et_nateon_modprofile_hint">Input your new NickName</string>
+
+    <string name="btn_oauth">OAUTH</string>
+    <string name="btn_dummyheader">SET_DUMMY_HEADER</string>
+    <string name="btn_clearheader">CLEAR_HEADER</string>
+    <string name="btn_clearresult">CLEAR_RESULT</string>
+    <string name="btn_showtokeninfo">SHOW_TOKEN_INFO</string>
+    <string name="btn_clearcookie">CLEAR_COOKIES</string>
+    <string name="btn_request1">Melon/Genre</string>
+    <string name="btn_request1a">Cy/NoteList</string>
+    <string name="btn_request2">REQ_DELETE</string>
+    <string name="btn_request3">REQ_POT</string>
+    <string name="btn_request4">REQ_POST</string>
+	<string name="btn_refreshtoken">REFRESH TOKEN</string>
+    <string name="btn_clear_token_info">CLEAR TOKEN INFO</string>
+    <string name="btn_restore_oauth">RESTORE OAUTH</string>
+    
+    <string name="btn_back">Back</string>
+    
+    
+</resources>
