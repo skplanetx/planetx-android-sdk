@@ -33,9 +33,13 @@ PlanetX SDK for Android에서 제공하는 모든 Source는 Apache License 2.0 (
 PlanetX SDK에서 사용중인 Library는 다음과 같습니다.
 
 Google Http Client 1.9.0
+
 guava 11.0.1
+
 httpclient 4.2.2
+
 httpcore 4.2.2
+
 httpmime 4.2.2
 
 위 5개 Library는 Apache License 2.0 ( GPL v2 or later )로 배포되고 있습니다.
