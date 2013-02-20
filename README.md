@@ -32,7 +32,7 @@ II. 처음 시작하기
 
 planetx-sample-android (https://github.com/skplanetx/planetx-android-sdk.git) 프로젝트는 planetx-oauth-android-sdk과 planetx-openapi-android-sdk 프로젝트가 반드시 필요합니다.
 
-PlanetX OpenAPI SDK에서 제공하는 메소드는 개발자센터내(https://developers.skplanetx.com/develop/doc/sdk/)에서 확인 가능합니다.
+PlanetX OpenAPI SDK에서 제공하는 메소드는 개발자센터내(https://developers.skplanetx.com/develop/doc/sdk/) 에서 확인 가능합니다.
 
 
 
