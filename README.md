@@ -47,6 +47,11 @@ PlanetX SDK for Android는 Apache License 2.0 ( GPL v2 or later )을 준수합�
 Link : GPL v3 전문 - http://www.gnu.org/licenses/gpl.txt
 
 
+기타 궁금하신 내역은 개발자 센터의 Contact us를 이용하여 문의 바랍니다.
+( https://developers.skplanetx.com/community/contact-us/enrollment/ )
+
+
+
 IV. 업데이트 내역
 
 - 2013.02.03
