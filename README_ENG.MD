@@ -45,6 +45,9 @@ The Planet X SDK for Android observes the rules and regulations in the Apache Li
 
 For more information about the text of the GPL v3, see http://www.gnu.org/licenses/gpl.txt.
 
+If you have any question please feel free to contact us
+( https://developers.skplanetx.com/community/contact-us/enrollment/ )
+
 IV. Update History
 
 - 2013.02.03
