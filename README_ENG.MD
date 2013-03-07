@@ -44,3 +44,15 @@ Five libraries shown above are published under the Apache License, Version 2.0 (
 The Planet X SDK for Android observes the rules and regulations in the Apache License, Version 2.0 (GPL v2 or later).
 
 For more information about the text of the GPL v3, see http://www.gnu.org/licenses/gpl.txt.
+
+If you have any question please feel free to contact us
+( https://developers.skplanetx.com/community/contact-us/enrollment/ )
+
+IV. Update History
+
+- 2013.02.03
+ Added Sample Project
+
+- 2013.01.27 
+ Migrated from PlanetX Developer Center 
+
