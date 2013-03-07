@@ -29,7 +29,7 @@ public class CyworldNoteWriteArticle extends BaseActivity implements OnClickList
 	final String USERID = "67324899";
 	
 	// Comm Data
-	String URL = Const.SERVER + "/cyworld/note/"+USERID+"/notes";
+	String URL = Const.SERVER + "/cyworld/note/"+USERID+"/items";
 	Map<String, Object> param;
 
 	// UI
