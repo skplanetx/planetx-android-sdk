@@ -19,12 +19,15 @@ public class Init extends BaseActivity {
 
 	public void initOAuthData() {
 
+		
 		// Input here.
 		APIRequest.setAppKey("##APPKEY_INPUTHERE##");
 		
 		OAuthInfoManager.clientId = "##CLIENTID_INPUTHERE##";
 		OAuthInfoManager.clientSecret = "##CLIENTSECRET_INPUTHERE##";
 		OAuthInfoManager.scope = "##SCOPE_INPUTHERE##";
+		 
+		
 	}
 	
 	public void moveToMainPage() {

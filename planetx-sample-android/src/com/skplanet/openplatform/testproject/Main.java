@@ -16,13 +16,12 @@ public class Main extends BaseActivity implements OnClickListener {
 	Button btnOAuth;
 
 	// Button List
-	Button btnMelonNewSongs;
-	Button btnNateOnGetProfile;
-	Button btnNateOnModProfile;
-	Button btnCLogWriteArticle;
-	Button btnCLogUploadImage;
-	Button btnCLogDeleteArticle;
-
+	Button btnMenu0;
+	Button btnMenu1;
+	Button btnMenu2;
+	Button btnMenu3;
+	Button btnMenu4;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -36,24 +35,22 @@ public class Main extends BaseActivity implements OnClickListener {
 
 	public void initUI() {
 		btnOAuth = (Button) findViewById(R.id.MAIN_BTN_LOGIN);
-		btnMelonNewSongs = (Button) findViewById(R.id.MAIN_BTN_MELON_NEWSONGS);
-		btnNateOnGetProfile = (Button) findViewById(R.id.MAIN_BTN_NATEON_GETPROFILE);
-		btnNateOnModProfile = (Button) findViewById(R.id.MAIN_BTN_NATEON_MODPROFILE);
-		btnCLogWriteArticle = (Button) findViewById(R.id.MAIN_BTN_CLOG_WRITE_ARTICLE);
-		btnCLogUploadImage = (Button) findViewById(R.id.MAIN_BTN_CLOG_IMG_UPLOAD);
-		btnCLogDeleteArticle = (Button) findViewById(R.id.MAIN_BTN_CLOG_DELETE_ARTICLE);
+		btnMenu0 = (Button) findViewById(R.id.MAIN_BTN_MELON_NEWSONGS);
+		btnMenu1 = (Button) findViewById(R.id.MAIN_BTN_ELEVENSTREET_CATEGORIES);
+		btnMenu2 = (Button) findViewById(R.id.MAIN_BTN_TCLOUD_IMAGES);
+		btnMenu3 = (Button) findViewById(R.id.MAIN_BTN_TCLOUD_IMAGES_DELETE);
+		btnMenu4 = (Button) findViewById(R.id.MAIN_BTN_TCLOUD_IMAGE_TAGS);
 	}
 
 	public void allocListener() {
 
 		Button btns[] = {
 			btnOAuth,
-			btnMelonNewSongs,
-			btnNateOnGetProfile,
-			btnNateOnModProfile,
-			btnCLogWriteArticle,
-			btnCLogUploadImage,
-			btnCLogDeleteArticle
+			btnMenu0,
+			btnMenu1,
+			btnMenu2,
+			btnMenu3,
+			btnMenu4			
 		};
 		
 		for(Button btn  : btns)
@@ -94,24 +91,20 @@ public class Main extends BaseActivity implements OnClickListener {
 			startActivity(new Intent(this, MelonNewSongs.class));
 			break;
 		}
-		case R.id.MAIN_BTN_NATEON_GETPROFILE: {
-			startActivity(new Intent(this, NateOnGetProfile.class));
+		case R.id.MAIN_BTN_ELEVENSTREET_CATEGORIES: {
+			startActivity(new Intent(this, ElevenStreetCategories.class));
 			break;
 		}
-		case R.id.MAIN_BTN_NATEON_MODPROFILE: {
-			startActivity(new Intent(this, NateOnModProfile.class));
+		case R.id.MAIN_BTN_TCLOUD_IMAGES: {
+			startActivity(new Intent(this, TcloudImages.class));
 			break;
 		}
-		case R.id.MAIN_BTN_CLOG_WRITE_ARTICLE: {
-			startActivity(new Intent(this, CyworldNoteWriteArticle.class));
+		case R.id.MAIN_BTN_TCLOUD_IMAGES_DELETE: {
+			startActivity(new Intent(this, TcloudImagesDelete.class));
 			break;
 		}
-		case R.id.MAIN_BTN_CLOG_IMG_UPLOAD: {
-			startActivity(new Intent(this, CyworldNoteUploadFile.class));
-			break;
-		}
-		case R.id.MAIN_BTN_CLOG_DELETE_ARTICLE: {
-			startActivity(new Intent(this, CyworldNoteDeleteArticle.class));
+		case R.id.MAIN_BTN_TCLOUD_IMAGE_TAGS: {
+			startActivity(new Intent(this, TcloudImageTags.class));
 			break;
 		}
 		

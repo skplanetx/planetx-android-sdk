@@ -22,12 +22,12 @@
         <activity android:name=".Main" 						android:label="@string/app_name" />
         <activity android:name=".ElevenStreetCategories" 	android:label="@string/app_name" />
         <activity android:name=".MelonNewSongs" 			android:label="@string/app_name" />
-        <activity android:name=".NateOnGetProfile" 			android:label="@string/app_name" />
-        <activity android:name=".NateOnModProfile" 			android:label="@string/app_name" />
-        <activity android:name=".CyworldNoteDeleteArticle"			android:label="@string/app_name" />
-        <activity android:name=".CyworldNoteWriteArticle"			android:label="@string/app_name" />
-        <activity android:name=".CyworldNoteUploadFile"			android:label="@string/app_name" />
-    </application>
+        
+        <activity android:name=".TcloudImages"				android:label="@string/app_name" />
+        <activity android:name=".TcloudImagesDelete"		android:label="@string/app_name" />
+        <activity android:name=".TcloudImageTags"			android:label="@string/app_name" />
+        
+	</application>
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />

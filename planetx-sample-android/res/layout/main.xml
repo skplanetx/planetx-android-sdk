@@ -28,47 +28,39 @@
                 android:layout_marginTop="10dip"
                 android:gravity="left|center_vertical"
                 android:paddingLeft="20dp"
-                android:text="@string/btn_melon_newsongs" />
+                android:text="@string/btn_menu_0" />
 
             <Button
-                android:id="@+id/MAIN_BTN_NATEON_GETPROFILE"
+                android:id="@+id/MAIN_BTN_ELEVENSTREET_CATEGORIES"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left|center_vertical"
                 android:paddingLeft="20dp"
-                android:text="@string/btn_nateon_getprofile" />
+                android:text="@string/btn_menu_1" />
 
             <Button
-                android:id="@+id/MAIN_BTN_NATEON_MODPROFILE"
+                android:id="@+id/MAIN_BTN_TCLOUD_IMAGES"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left|center_vertical"
                 android:paddingLeft="20dp"
-                android:text="@string/btn_nateon_modprofile" />
+                android:text="@string/btn_menu_2" />
 
             <Button
-                android:id="@+id/MAIN_BTN_CLOG_WRITE_ARTICLE"
+                android:id="@+id/MAIN_BTN_TCLOUD_IMAGES_DELETE"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left|center_vertical"
                 android:paddingLeft="20dp"
-                android:text="@string/btn_clog_writearticle" />
+                android:text="@string/btn_menu_3" />
 
             <Button
-                android:id="@+id/MAIN_BTN_CLOG_IMG_UPLOAD"
+                android:id="@+id/MAIN_BTN_TCLOUD_IMAGE_TAGS"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:gravity="left|center_vertical"
                 android:paddingLeft="20dp"
-                android:text="@string/btn_clog_uploadimage" />
-
-            <Button
-                android:id="@+id/MAIN_BTN_CLOG_DELETE_ARTICLE"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="left|center_vertical"
-                android:paddingLeft="20dp"
-                android:text="@string/btn_clog_deletearticle" />
+                android:text="@string/btn_menu_4" />
         </LinearLayout>
     </ScrollView>
 
