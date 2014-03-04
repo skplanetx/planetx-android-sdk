@@ -32,6 +32,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
 import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.CoreProtocolPNames;
 import org.apache.http.params.HttpParams;
 import org.apache.http.params.HttpProtocolParams;
 import org.apache.http.protocol.HTTP;
@@ -462,6 +463,17 @@ public class APIRequest implements APIRequestInterface {
 			log("Http!!");
 			httpClient = new DefaultHttpClient();
 		}
+		
+		// UA 값 추가 2014 03 03
+		String userAgentString = PlanetXSDKConstants.SDK_VERSION_PREFIX	+ PlanetXSDKConstants.SDK_VERSION;
+		httpClient.getParams().setParameter(CoreProtocolPNames.USER_AGENT, userAgentString);
+		
+		if (PlanetXSDKConstants.IS_DEBUG) {
+			HttpParams hp = httpClient.getParams();
+			String stringUa = hp.getParameter(CoreProtocolPNames.USER_AGENT) + "";
+			log("User agent : " + stringUa);
+		}
+		
 		
 		HttpResponse response;
 		ResponseMessage returnMessage = null;

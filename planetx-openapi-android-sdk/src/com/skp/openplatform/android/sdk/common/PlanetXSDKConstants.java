@@ -2,7 +2,10 @@ package com.skp.openplatform.android.sdk.common;
 
 public class PlanetXSDKConstants {
 
-	public static boolean IS_DEBUG = false;
+	public static String SDK_VERSION_PREFIX = "SDK Android/";
+	public static String SDK_VERSION = "1.04";
+	
+	public static boolean IS_DEBUG = true;
 	
 	public static enum CONTENT_TYPE {
 		XML, JSON, FORM, JS, KML, KMZ, GEO
