@@ -38,6 +38,8 @@ import org.apache.http.params.HttpProtocolParams;
 import org.apache.http.protocol.HTTP;
 import org.apache.http.util.EntityUtils;
 
+import android.webkit.WebSettings;
+
 import com.skp.openplatform.android.sdk.common.PlanetXSDKConstants;
 import com.skp.openplatform.android.sdk.common.PlanetXSDKConstants.CONTENT_TYPE;
 import com.skp.openplatform.android.sdk.common.PlanetXSDKConstants.HttpMethod;
@@ -465,7 +467,9 @@ public class APIRequest implements APIRequestInterface {
 		}
 		
 		// UA 값 추가 2014 03 03
-		String userAgentString = PlanetXSDKConstants.SDK_VERSION_PREFIX	+ PlanetXSDKConstants.SDK_VERSION;
+		String defaultUserAgent = System.getProperty( "http.agent" );
+		
+		String userAgentString = defaultUserAgent + "; " + PlanetXSDKConstants.SDK_VERSION_PREFIX	+ PlanetXSDKConstants.SDK_VERSION;
 		httpClient.getParams().setParameter(CoreProtocolPNames.USER_AGENT, userAgentString);
 		
 		if (PlanetXSDKConstants.IS_DEBUG) {
