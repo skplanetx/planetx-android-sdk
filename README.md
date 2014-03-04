@@ -59,3 +59,7 @@ IV. 업데이트 내역
 
 - 2013.01.27 
  개발자센터로 부터 이동
+
+- 2013.03.04
+ OAuth SDK : Popup 트리거 변경.
+ OpenAPI SDK : Header에 User Agent 값 추가.
