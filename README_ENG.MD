@@ -55,4 +55,9 @@ IV. Update History
 
 - 2013.01.27 
  Migrated from PlanetX Developer Center 
+ 
+- 2013.03.04 
+ OAuth SDK : change popup trigger 
+ 
+ OpenAPI SDK : added user-agent in header
 
