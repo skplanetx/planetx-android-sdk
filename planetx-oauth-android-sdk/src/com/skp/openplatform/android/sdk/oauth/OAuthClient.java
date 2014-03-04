@@ -215,6 +215,15 @@ public class OAuthClient extends Dialog {
 		public boolean shouldOverrideUrlLoading(WebView view, String url) {
 			log("shouldOverrideUrlLoading URL : " + url);
 			
+			if(url.indexOf("___target=_blank") > -1){
+				Intent i = new Intent(Intent.ACTION_VIEW);
+				i.setData(Uri.parse(url));
+				OAuthInfoManager.context.startActivity(i);
+				return true;
+			}
+			
+			
+			/*
 			if(url.startsWith("oauths://"))
 			{
 				String innerUrl = url.replaceAll("oauths://", "https://");
@@ -236,7 +245,7 @@ public class OAuthClient extends Dialog {
 				OAuthInfoManager.context.startActivity(i);
 				return true;
 			}
-			
+			*/
 //			view.loadUrl(url);
 			
 			return false;
