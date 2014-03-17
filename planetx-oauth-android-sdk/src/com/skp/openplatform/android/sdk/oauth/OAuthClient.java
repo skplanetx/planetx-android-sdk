@@ -28,6 +28,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.net.http.SslError;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.view.Menu;
 import android.view.Window;
 import android.view.WindowManager;
@@ -103,6 +104,8 @@ public class OAuthClient extends Dialog {
 		webView.setLayoutParams(lp);
 		
 		clearCookies();		
+		
+//		webView.getSettings().setUserAgentString(ua);
 		
 		webView.getSettings().setPluginState(PluginState.ON);
 		webView.getSettings().setDefaultZoom(WebSettings.ZoomDensity.MEDIUM);
@@ -222,6 +225,10 @@ public class OAuthClient extends Dialog {
 				return true;
 			}
 			
+			if(url.startsWith("http")){
+				view.loadUrl(url);
+				return true;
+			}
 			
 			/*
 			if(url.startsWith("oauths://"))
@@ -412,6 +419,7 @@ public class OAuthClient extends Dialog {
 	public void log(String log) {
 		if(Constants.IS_DEBUG){
 			System.out.println(log);
+			Log.d(this.getClass().getName(), "LOG : " + log);
 		}
 	}
 	
