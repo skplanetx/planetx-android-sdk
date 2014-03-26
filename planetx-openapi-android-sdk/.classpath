@@ -4,7 +4,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="lib" path="libs/android.jar"/>
 	<classpathentry kind="lib" path="libs/annotations.jar"/>
-	<classpathentry exported="true" kind="lib" path="libs/google-http-client-1.9.0-beta.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/guava-11.0.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/httpclient-4.2.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="libs/httpcore-4.2.2.jar"/>
