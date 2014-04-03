@@ -119,13 +119,14 @@ public class OAuthClient extends Dialog {
 		
 		webView.getSettings().setUserAgentString(webView.getSettings().getUserAgentString()+" " + "oauth/1.0");
 		
-		
 		webView.loadUrl(getOAuthorizationUrl());
 		
 		rlOutline.addView(webView);
 		
 		setContentView(rlOutline);
 		
+		// resizing by keypad
+		getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_RESIZE);
 	}
 	
 	private String getOAuthorizationUrl()
