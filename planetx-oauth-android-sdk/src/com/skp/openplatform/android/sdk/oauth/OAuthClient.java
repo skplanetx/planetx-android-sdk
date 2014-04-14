@@ -226,37 +226,12 @@ public class OAuthClient extends Dialog {
 				return true;
 			}
 			
-			if(url.startsWith("http")){
-				view.loadUrl(url);
-				return true;
-			}
+//			if(url.startsWith("http")){
+//				view.loadUrl(url);
+//				return true;
+//			}
 			
-			/*
-			if(url.startsWith("oauths://"))
-			{
-				String innerUrl = url.replaceAll("oauths://", "https://");
-				log("innerUrl URL : " + innerUrl);
-				
-				Intent i = new Intent(Intent.ACTION_VIEW);
-				i.setData(Uri.parse(innerUrl));
-				OAuthInfoManager.context.startActivity(i);
-				return true;
-			}
-			
-			if(url.startsWith("oauth://"))
-			{
-				String innerUrl = url.replaceAll("oauth://", "http://");
-				log("innerUrl URL : " + innerUrl);
-				
-				Intent i = new Intent(Intent.ACTION_VIEW);
-				i.setData(Uri.parse(innerUrl));
-				OAuthInfoManager.context.startActivity(i);
-				return true;
-			}
-			*/
-//			view.loadUrl(url);
-			
-			return false;
+			return super.shouldOverrideUrlLoading(view, url);
 		}
 
 		@Override
@@ -294,18 +269,15 @@ public class OAuthClient extends Dialog {
 				}
 				
 				dismiss();
-				return;
 			}
-			else if (url.indexOf("access_complete_mobile") > -1) { // 처리 완료 페이지 일 때
-
+			else if (url.indexOf("access_complete_mobile") > -1 ) { // 처리 완료 페이지 일 때
+				
 				OAuthInfoManager.code = StringUtil.getValueFromQueryString(url, "code");
-
+	
 				new ReadUrl().execute(getOAccessTokenUrl());
 				dismiss();
-				return;
+
 			}
-			
-			
 			
 			super.onPageFinished(view, url);
 		}
@@ -363,15 +335,17 @@ public class OAuthClient extends Dialog {
 					if(oAuthListener != null) {
 						if(oAuthResult != -1)
 						{
-							oAuthListener.onComplete("");	
+							oAuthListener.onComplete("");
 						}
 						else {
 							oAuthListener.onError("Failed to parsing OAuth Information");
 						}
 					}
+					return;
 				}
 				else
 				{
+					System.out.println("Result is null or isLogOn is false");
 					if(oAuthListener != null) {
 						oAuthListener.onError(OAuthInfoManager.error + OAuthInfoManager.error_desc);
 					}
@@ -419,7 +393,7 @@ public class OAuthClient extends Dialog {
 	
 	public void log(String log) {
 		if(Constants.IS_DEBUG){
-			System.out.println(log);
+//			System.out.println(log);
 			Log.d(this.getClass().getName(), "LOG : " + log);
 		}
 	}
