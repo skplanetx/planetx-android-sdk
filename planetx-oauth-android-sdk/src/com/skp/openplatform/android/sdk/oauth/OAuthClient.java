@@ -25,9 +25,12 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.net.http.SslError;
 import android.os.AsyncTask;
+import android.os.Build;
+import android.os.Message;
 import android.util.Log;
 import android.view.Menu;
 import android.view.Window;
@@ -37,6 +40,7 @@ import android.webkit.CookieSyncManager;
 import android.webkit.JsResult;
 import android.webkit.SslErrorHandler;
 import android.webkit.WebChromeClient;
+import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebSettings.PluginState;
 import android.webkit.WebView;
@@ -105,12 +109,9 @@ public class OAuthClient extends Dialog {
 		
 		clearCookies();		
 		
-//		webView.getSettings().setUserAgentString(ua);
-		
 		webView.getSettings().setPluginState(PluginState.ON);
 		webView.getSettings().setDefaultZoom(WebSettings.ZoomDensity.MEDIUM);
 		webView.getSettings().setJavaScriptEnabled(true);
-		webView.getSettings().setPluginsEnabled(true);
 		webView.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
 		webView.getSettings().setSupportMultipleWindows(true);
 		webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
@@ -118,6 +119,7 @@ public class OAuthClient extends Dialog {
 		webView.setWebViewClient(new OAuthWebViewClient());
 		
 		webView.getSettings().setUserAgentString(webView.getSettings().getUserAgentString()+" " + "oauth/1.0");
+		
 		
 		webView.loadUrl(getOAuthorizationUrl());
 		
@@ -199,6 +201,25 @@ public class OAuthClient extends Dialog {
 					}).create().show();
 			return true;
 		}
+		
+		@Override
+		public boolean onCreateWindow(WebView view, boolean isDialog,
+				boolean isUserGesture, Message resultMsg) {
+
+			// for upper then kitkat
+			WebView.HitTestResult result = view.getHitTestResult();
+			String url = result.getExtra();
+			log("onCreateWindow URL : " + url);
+
+			if (url != null && url.indexOf("___target=_blank") > -1) {
+				Intent i = new Intent(Intent.ACTION_VIEW);
+				i.setData(Uri.parse(url));
+				OAuthInfoManager.context.startActivity(i);
+				return true;
+			}
+			
+			return super.onCreateWindow(view, isDialog, isUserGesture, resultMsg);
+		}
 	}	
 	
 	public void clearCookies()
@@ -225,11 +246,6 @@ public class OAuthClient extends Dialog {
 				OAuthInfoManager.context.startActivity(i);
 				return true;
 			}
-			
-//			if(url.startsWith("http")){
-//				view.loadUrl(url);
-//				return true;
-//			}
 			
 			return super.shouldOverrideUrlLoading(view, url);
 		}
