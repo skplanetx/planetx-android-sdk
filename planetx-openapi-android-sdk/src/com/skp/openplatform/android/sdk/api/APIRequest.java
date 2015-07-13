@@ -497,8 +497,7 @@ public class APIRequest implements APIRequestInterface {
 			}
 			
 		} catch (IOException e) {
-			PlanetXSDKException e1 = (PlanetXSDKException) e;
-			throw e1;
+			throw new PlanetXSDKException("ERR_CD_10000", e.getMessage());
 		}
 		
 		return returnMessage;
